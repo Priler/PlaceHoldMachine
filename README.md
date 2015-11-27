@@ -25,20 +25,20 @@ First of all, see "examples" directory.
 
 # Available class instance methods:
 
-  - **load__image( path____to_image )** used for loading image
+  - **load_image( path_to_image )** used for loading image
   - **create_placeholder()** used to build placeholder
-  - **disable__color__detection()** used to disable detection of primary color
-  - **enable__color__detection** used to enable detection of primary color
-  - **set__primary__color( (r, g, b) )** used to set your own primary color
-  - **set__contrast__color( (r, g, b) )** used to set your own contrast color (aka font color)
+  - **disable_color_detection()** used to disable detection of primary color
+  - **enable_color_detection** used to enable detection of primary color
+  - **set_primary_color( (r, g, b) )** used to set your own primary color
+  - **set_contrast_color( (r, g, b) )** used to set your own contrast color (aka font color)
   - **emulate_default()** used to restore default styling settings
   - **emulate_ubuntu()** used to emulate Ubuntu style behavior
-  - **emulate__ubuntu_orange()** used to emulate Ubuntu Orange style behavior
+  - **emulate_ubuntu_orange()** used to emulate Ubuntu Orange style behavior
   - **emulate_envato()** used to emulate Envato style behavior
   - **emulate_facebook()** used to emulate Facebook style behavior
   - **emulate_twitter()** used to emulate Twitter style behavior
-  - **emulate__placehold_it()** used to emulate style behavior of http://placehold.it
-  - **emulate__csshopper__placeholder()** used to emulate style behavior of http://lab.csschopper.com/placeholder/
+  - **emulate_placehold_it()** used to emulate style behavior of http://placehold.it
+  - **emulate_csshopper_placeholder()** used to emulate style behavior of http://lab.csschopper.com/placeholder/
   - **show()** used to display current placeholder in system's image viewer
   - **walk_recursive( dirs )** used to recursively find all images in provided directories list
   - **walk( dirs )** used to find all images only in provided directories list
