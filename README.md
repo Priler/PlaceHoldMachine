@@ -12,51 +12,33 @@ Supports massive convertion with the speed of light.
   - Robust startup. You can startup convertion just for 12 lines of code!
 
 # How it works?
-  1) Install Python, as well as PIL on your system
-  2) Download this repo (you can use "Download Zip" button for the sake of speed)
-  3) Open "use.py" for edit (or create your own if you want)
-  4) Setup settings as you want
-  5) List directories that need to be processed (in "dirs" array)
-  6) Run "use.py" (or your own file, if you have one) within Terminal and wait few seconds
+  1) Install Python, as well as PIL on your system  
+  2) Download this repo (you can use "Download Zip" button for the sake of speed)  
+  3) Open "use.py" for edit (or create your own if you want)  
+  4) Setup settings as you want  
+  5) List directories that need to be processed (in "dirs" array)  
+  6) Run "use.py" (or your own file, if you have one) within Terminal and wait few seconds  
   7) Done! Watch the result :)
 
 # How to work with this?
 First of all, see "examples" directory.  
-> Also, here is the very simple example of mass convertivg images to placeholders.
-```
-# -*- coding: utf-8 -*- 
-from PlaceHoldMachine import PlaceHoldMachine #import class
-
-i = PlaceHoldMachine() #create instance
-i.log_level = 2#set log level to 2, so we can see errors
-
-# set directories, where all images must be converted into placeholders
-dirs = [
-	'C:/MyTemplate/images/demo/',
-	'C:/MyTemplate/images/ads/',
-	'C:/MyTemplate/images/team/'
-]
-
-i.walk_recursive(dirs) #find all images in listed directories
-i.start() #start conversion process
-```
 
 # Available class instance methods:
 
-  - **load_image( path_to_image )** used for loading image
+  - **load__image( path____to_image )** used for loading image
   - **create_placeholder()** used to build placeholder
-  - **disable_color_detection()** used to disable detection of primary color
-  - **enable_color_detection** used to enable detection of primary color
-  - **set_primary_color( (r, g, b) )** used to set your own primary color
-  - **set_contrast_color( (r, g, b) )** used to set your own contrast color (aka font color)
+  - **disable__color__detection()** used to disable detection of primary color
+  - **enable__color__detection** used to enable detection of primary color
+  - **set__primary__color( (r, g, b) )** used to set your own primary color
+  - **set__contrast__color( (r, g, b) )** used to set your own contrast color (aka font color)
   - **emulate_default()** used to restore default styling settings
   - **emulate_ubuntu()** used to emulate Ubuntu style behavior
-  - **emulate_ubuntu_orange()** used to emulate Ubuntu Orange style behavior
+  - **emulate__ubuntu_orange()** used to emulate Ubuntu Orange style behavior
   - **emulate_envato()** used to emulate Envato style behavior
   - **emulate_facebook()** used to emulate Facebook style behavior
   - **emulate_twitter()** used to emulate Twitter style behavior
-  - **emulate_placehold_it()** used to emulate style behavior of http://placehold.it
-  - **emulate_csshopper_placeholder()** used to emulate style behavior of http://lab.csschopper.com/placeholder/
+  - **emulate__placehold_it()** used to emulate style behavior of http://placehold.it
+  - **emulate__csshopper__placeholder()** used to emulate style behavior of http://lab.csschopper.com/placeholder/
   - **show()** used to display current placeholder in system's image viewer
   - **walk_recursive( dirs )** used to recursively find all images in provided directories list
   - **walk( dirs )** used to find all images only in provided directories list
