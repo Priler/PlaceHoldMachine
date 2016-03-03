@@ -231,13 +231,13 @@ class PlaceHoldMachine:
 		# 3 = Warning messages
 		if self.log_level >= loglevel:
 			if loglevel == 1:
-				print '[Info] ' + message
+				print('[Info] ') + message
 			elif loglevel == 2:
-				print '[Error] ' + message
+				print('[Error] ') + message
 			elif loglevel == 3:
-				print '[Warning] ' + message
+				print('[Warning] ') + message
 			else:
-				print '[Unknown message level] ' + message
+				print('[Unknown message level] ') + message
 
 	# @walk_recursive
 	def walk_recursive(self, dirs = []):
