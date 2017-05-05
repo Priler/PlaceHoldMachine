@@ -42,6 +42,7 @@ First of all, see "examples" directory.
   - **show()** used to display current placeholder in system's image viewer
   - **walk_recursive( dirs )** used to recursively find all images in provided directories list
   - **walk( dirs )** used to find all images only in provided directories list
+  - **set_allowed_image_formats( formats )** used to set image formats that will be processed (i.e. ['JPEG', 'PNG'])
   - **start()** used to start convertion process of finded images
 
 # Available class instance properties:
@@ -96,6 +97,17 @@ Just fork this, make required changes and do pull request.
  - Gradients support
  - Background images support
  - Event system
+
+### Change history
+
+ - Version **1.0.2**
+   - Pillow 3.4.x is now supported
+   - Python 3 up to v3.6 is now supported
+   - *set_allowed_image_formats* method was added
+ - Version **1.0.1**
+   - Python 3 support fix
+ - Version **1.0.0**
+   - Initial release
 
 License
 ----
