@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*- 
-import Image, ImageDraw, ImageFont, os, time
+from PIL import Image, ImageDraw, ImageFont
+import os, time, sys
 from math import ceil
 
 class PlaceHoldMachine:
@@ -19,6 +20,7 @@ class PlaceHoldMachine:
 	log_level = 1
 	color_detection = True
 	quality = 90
+	allowed_image_formats = '*'
 
 	def __init__(self):
 		'''Self initialization'''
@@ -61,7 +63,7 @@ class PlaceHoldMachine:
 		        g_ave = (g + g_ave) / 2
 		        b_ave = (b + b_ave) / 2
 
-		self.primary_color = (r_ave, g_ave, b_ave)
+		self.primary_color = (int(r_ave), int(g_ave), int(b_ave))
 		self.compute_contrast_color()
 		self.font_color = self.contrast_color
 		return True
@@ -216,6 +218,11 @@ class PlaceHoldMachine:
 		self.load_font('./fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf', 1)
 		self.font_size = '7%'
 
+	# @set allowed formats
+	def set_allowed_image_formats(self, formats = []):
+		if type(formats) is list or type(formats) is tuple:
+			self.allowed_image_formats = formats
+
 	# @show placeholder
 	def show(self):
 		'''Display placeholder image'''
@@ -231,13 +238,13 @@ class PlaceHoldMachine:
 		# 3 = Warning messages
 		if self.log_level >= loglevel:
 			if loglevel == 1:
-				print('[Info] ') + message
+				print('[Info] ' + message)
 			elif loglevel == 2:
-				print('[Error] ') + message
+				print('[Error] ' + message)
 			elif loglevel == 3:
-				print('[Warning] ') + message
+				print('[Warning] ' + message)
 			else:
-				print('[Unknown message level] ') + message
+				print('[Unknown message level] ' + message)
 
 	# @walk_recursive
 	def walk_recursive(self, dirs = []):
@@ -273,6 +280,9 @@ class PlaceHoldMachine:
 		if len(self.images_list):
 			for image in self.images_list:
 				if self.load_image(image):
+					if self.allowed_image_formats != '*':
+						if not self.active_image.format in self.allowed_image_formats:
+							continue
 					self.compute_primary_color()
 					self.create_placeholder()
 					try:
