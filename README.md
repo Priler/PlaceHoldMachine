@@ -76,7 +76,7 @@ pip install PIL --allow-external PIL --allow-unverified PIL
 ```
 
 ### Version
-1.0.0
+1.0.2
 
 ### Author
 
