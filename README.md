@@ -1,7 +1,7 @@
 # PlaceHoldMachine
 
 Advanced &amp; easy2use Python class for making image placeholders.  
-Supports massive convertion with the speed of light.
+Supports massive conversion with the speed of light.
 
 # Benefits
   - Requires only Python (both 2.x and 3.x supported) and PIL to be installed on your system
@@ -9,7 +9,7 @@ Supports massive convertion with the speed of light.
   - Really fast speed, PlaceHoldMachine can convert up to 1.000 heavy weight images to placeholders within 30 seconds (~3 seconds for 100 files)
   - Supports primary color detection and usage of it as background color (you can disable this if you want to)
   - Highly customizable, use your own fonts, your own colors, your own styles e.t.c.
-  - Robust startup. You can startup convertion just for 12 lines of code!
+  - Robust startup. You can startup conversion just for 12 lines of code!
 
 # How it works?
   1) Install Python, as well as PIL on your system  
@@ -57,7 +57,7 @@ First of all, see "examples" directory.
      - 3 - INFO, ERRORS and WARNINGS level logs will be printed
 
 # How to install Python?
-> Visit http://python.org/ and download Python for your system (Python 2.x is preffered)
+> Visit http://python.org/ and download Python for your system (Python 2.x is preferred)
 
 # How to install PIL?
 
@@ -90,7 +90,7 @@ Just fork this, make required changes and do pull request.
 
 ### Todos
 
- - GUI for Linux, Windows and MAC
+ - GUI for Linux, Windows, and MAC
  - Thumbnailing
  - File names suffixing
  - Watermarks support
